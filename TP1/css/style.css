@@ -391,3 +391,11 @@ article {
   opacity: 0.5;
   transform: rotate(5deg);
 }
+#monSVG {
+  position: fixed;
+}
+#monSVG path {
+  fill: none;
+  stroke: #f00;
+  stroke-width: 3;
+}
