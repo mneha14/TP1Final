@@ -1,4 +1,4 @@
-/*// on cible l'élément « path » que l'on veut animer 
+// on cible l'élément « path » que l'on veut animer 
 	var triangle = document.querySelectorAll("#monSVG path")[0];
 	// la longueur du chemin «path»
 	var longueur = triangle.getTotalLength();
@@ -14,7 +14,7 @@
 	triangle.style.strokeDashoffset = longueur;
 
 	// extraire la fraction du déplacement de la barre de défilement et  ajusté le tracé
-	window.addEventListener("scroll", maTrace);*/
+	window.addEventListener("scroll", maTrace);
 
 
 	function maTrace() {

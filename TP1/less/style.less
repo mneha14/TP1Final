@@ -11,6 +11,37 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/*LESS*/
+.transform(@args) {
+  -webkit-transform: @args;
+  -ms-transform: @args;
+  transform: @args;
+}
+
+.flex-display{
+  display: -webkit-box;      
+  display: -moz-box;         
+  display: -ms-flexbox;      
+  display: -webkit-flex;
+  display: flex;
+}
+
+.transform-style(@style) {
+    -webkit-transform-style: @style;
+    -moz-transform-style: @style;
+    -ms-transform-style: @style; 
+    -o-transform-style: @style;
+    transform-style: @style;
+}
+
+.perspective(@pers){
+  -webkit-perspective: @pers;
+  -moz-perspective: @pers;
+  -ms-perspective: @pers; 
+  -o-perspective: @pers;
+  perspective: @pers;
+}
+
 
 html,
 body,
@@ -213,9 +244,7 @@ a:hover {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  -webkit-perspective: 1px;
-  -ms-perspective: 1px;
-  perspective: 1px;
+  .perspective( 1px);
 }
 
 .parallax__group {
@@ -223,9 +252,7 @@ a:hover {
   height: 100vh;
   overflow-scrolling: touch;
   -webkit-overflow-scrolling: touch;
-  -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+  .transform-style( preserve-3d);
 }
 
 .parallax__layer {
@@ -241,15 +268,13 @@ a:hover {
 }
 
 .parallax__layer--base {
-  -webkit-transform: translateZ(0);
+  .transform( translateZ(0));
   height: 100%;
   z-index: -2;
 }
 
 .parallax__layer--content {
-  -webkit-transform: translateZ(-1px) scale(2);
-  -ms-transform: translateZ(-1px) scale(2);
-  transform: translateZ(-1px) scale(2);
+  .transform( translateZ(-1px) scale(2));
   background-image: url("../images/montagne.svg");
   margin-top: 78%;
   z-index: -3;
@@ -257,9 +282,7 @@ a:hover {
 
 .parallax__layer--sol {
   position: fixed;
-  -webkit-transform: translateZ(-2px) scale(3);
-  -ms-transform: translateZ(-2px) scale(3);
-  transform: translateZ(-2px) scale(3);
+  .transform( translateZ(-2px) scale(3));
   background-image: url("../images/sol.svg");
   margin-top: 26%;
   z-index: -4;
@@ -267,9 +290,7 @@ a:hover {
 
 .parallax__layer--montagne {
   position: fixed;
-  -webkit-transform: translateZ(-3px) scale(4);
-  -ms-transform: translateZ(-3px) scale(4);
-  transform: translateZ(-3px) scale(4);
+  .transform( translateZ(-3px) scale(4));
   background-image: url("../images/montagne.svg");
   margin-top: -16%;
   z-index: -5;
@@ -277,9 +298,7 @@ a:hover {
 
 .parallax__layer--montagne02 {
   position: fixed;
-  -webkit-transform: translateZ(-4px) scale(5);
-  -ms-transform: translateZ(-4px) scale(5);
-  transform: translateZ(-4px) scale(5);
+  .transform( translateZ(-4px) scale(5));
   background-image: url("../images/montagne2.svg");
   margin-top: -22%;
   z-index: -6;
@@ -287,7 +306,7 @@ a:hover {
 
 .parallax__layer--nuages {
   position: fixed;
-  -webkit-transform: translateZ(0) scale(1);
+  .transform( translateZ(0) scale(1));
   -ms-transform: translateZ(0) scale(1);
   transform: translateZ(0) scale(1);
   background-image: url("../images/nuage.svg");
@@ -298,9 +317,7 @@ a:hover {
 
 .parallax__layer--aliments {
   position: fixed;
-  -webkit-transform: translateZ(-3px) scale(4);
-  -ms-transform: translateZ(-3px) scale(4);
-  transform: translateZ(-3px) scale(4);
+ .transform( translateZ(-3px) scale(4));
   background-image: url("../images/aliments.svg");
   margin: auto;
   margin-top: -15%;
@@ -312,9 +329,7 @@ a:hover {
 
 .parallax__layer--logo {
   position: fixed;
-  -webkit-transform: translateZ(-3px) scale(4);
-  -ms-transform: translateZ(-3px) scale(4);
-  transform: translateZ(-3px) scale(4);
+  .transform( translateZ(-3px) scale(4));
   background-image: url("../images/burger.svg");
   right: 0px;
   width: 100%;
@@ -331,9 +346,7 @@ a:hover {
 
 .parallax__layer--ciel {
   position: fixed;
-  -webkit-transform: translateZ(-5px) scale(6);
-  -ms-transform: translateZ(-5px) scale(6);
-  transform: translateZ(-5px) scale(6);
+  .transform( translateZ(-5px) scale(6));
   background-image: url("../images/ciel.svg");
   background-size: 100%;
   height: 100vh;
@@ -377,9 +390,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  .transform( translate(-50%, -50%));
 }
 
 /* style the groups
@@ -409,12 +420,7 @@ h1 {
 /*FLEXBOX*/
 
 .flexbox{
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  
+ .flex-display;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
   text-align: center;
@@ -447,6 +453,7 @@ article{
 
 }
 
+/*POUR ANIMATION JAVASCRIPT*/
 #monSVG {
   position: fixed;
 }
@@ -456,8 +463,6 @@ article{
   stroke: #f00;
   stroke-width: 3;
 }
-
-
 
 
 

@@ -10,6 +10,14 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/*LESS*/
+.flex-display {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
 html,
 body,
 div,
@@ -193,7 +201,9 @@ a:hover {
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-perspective: 1px;
+  -moz-perspective: 1px;
   -ms-perspective: 1px;
+  -o-perspective: 1px;
   perspective: 1px;
 }
 .parallax__group {
@@ -202,7 +212,9 @@ a:hover {
   overflow-scrolling: touch;
   -webkit-overflow-scrolling: touch;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .parallax__layer {
@@ -218,6 +230,8 @@ a:hover {
 }
 .parallax__layer--base {
   -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
   height: 100%;
   z-index: -2;
 }
@@ -391,6 +405,7 @@ article {
   opacity: 0.5;
   transform: rotate(5deg);
 }
+/*POUR ANIMATION JAVASCRIPT*/
 #monSVG {
   position: fixed;
 }
