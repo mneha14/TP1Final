@@ -360,6 +360,7 @@ h1 {
   letter-spacing: 8px;
   text-transform: uppercase;
 }
+/*FLEXBOX*/
 .flexbox {
   display: -webkit-box;
   display: -moz-box;
@@ -372,4 +373,21 @@ h1 {
 }
 article {
   text-align: center;
+}
+/*ANIMATION SVG*/
+.path {
+  stroke-dasharray: 100;
+  animation: bouge 3s linear infinite;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+@keyframes bouge {
+  to {
+    stroke-dashoffset: 2000;
+  }
+}
+/*TRANSITIONS*/
+.path:hover {
+  opacity: 0.5;
+  transform: rotate(5deg);
 }
